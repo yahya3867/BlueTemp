@@ -2,7 +2,7 @@ import os
 import shutil
 
 # Base directory path where the 'year' folder is located
-base_dir = 'year'  # Adjust this path to your actual 'year' folder location
+base_dir = '/year'  # Adjust this path to your actual 'year' folder location
 
 # Function to organize files by sensor and month within each yearly folder
 def organize_files(base_dir):
