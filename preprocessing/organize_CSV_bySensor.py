@@ -2,9 +2,9 @@ import os
 import shutil
 
 # Set the path to the main folder that contains yearly folders
-source_folder = r"C:\Users\ymasr\OneDrive\Desktop\year - Copy - Copy"
-# Set the path where you want the new sensor-based folders
-destination_folder = r"C:\Users\ymasr\OneDrive\Desktop\sensordata"
+source_folder = 'year'
+# Create a new folder which will hold your sensor-based folders. 
+destination_folder = '/sensordata'
 
 # Ensure the destination folder exists
 if not os.path.exists(destination_folder):
