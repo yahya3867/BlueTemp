@@ -2,7 +2,7 @@ import os
 import shutil
 
 # Set the path to the main folder that contains yearly folders
-source_folder = 'year'
+source_folder = '/year'
 # Create a new folder which will hold your sensor-based folders. 
 destination_folder = '/sensordata'
 
