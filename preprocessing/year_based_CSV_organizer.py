@@ -2,10 +2,10 @@ import os
 import shutil
 
 # Set the path to the folder containing your CSV files
-source_folder = 'gcoos_platform_water_temperature_csvs'
+source_folder = '/gcoos_platform_water_temperature_csvs'
 
 # Create a new folder named 'years' which will hold your subyear folders
-destination_folder = 'years'
+destination_folder = '/year'
 
 # Ensure the destination folder exists
 if not os.path.exists(destination_folder):
