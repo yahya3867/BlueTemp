@@ -2,9 +2,9 @@ import os
 import pandas as pd
 
 # Path to the main folder containing each sensor folder with CSV files
-sensor_folder_path = r"C:\Users\ymasr\OneDrive\Desktop\sensordata"
-# Path to save the combined data files
-output_folder = r"C:\Users\ymasr\OneDrive\Desktop\combinesensordata"
+sensor_folder_path = '/sensordata
+# Create a new folder to save the combined data files
+output_folder = '/combined_sensordata"
 
 # Ensure the output folder exists
 os.makedirs(output_folder, exist_ok=True)
