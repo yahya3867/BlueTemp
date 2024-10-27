@@ -3,10 +3,10 @@ from bs4 import BeautifulSoup
 import os
 
 # Base URL of the main directory
-base_url = "https://data.gcoos.org/data/waf/csv_by_observation/"
+base_url = "https://data.gcoos.org/data/waf/csv_by_platform/"
 
 # Directory to save downloaded files
-os.makedirs("gcoos_water_temperature_csvs", exist_ok=True)
+os.makedirs("gcoos_platform_water_temperature_csvs", exist_ok=True)
 
 # Function to get all subdirectories for each year
 def get_year_directories():
@@ -28,9 +28,9 @@ for year_url in get_year_directories():
     file_found = False  # Track if file is found in each directory
     for link in soup.find_all("a"):
         file_name = link.get("href")
-        if file_name.endswith("water_temperature.csv"):
+        if "sea_water_temperature" in file_name:
             file_url = year_url + file_name
-            file_path = os.path.join("gcoos_water_temperature_csvs", f"{year_url.split('/')[-2]}_{file_name}")
+            file_path = os.path.join("gcoos_platform_water_temperature_csvs", f"{year_url.split('/')[-2]}_{file_name}")
             
             # Download and save the file
             csv_data = requests.get(file_url, headers={"User-Agent": "Mozilla/5.0"})
