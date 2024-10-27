@@ -2,9 +2,10 @@ import os
 import shutil
 
 # Set the path to the folder containing your CSV files
-source_folder = r'C:\Users\ymasr\OneDrive\Desktop\Code\gcoos_platform_water_temperature_csvs'
-# Set the path to where you want the organized folders to be created (can be the same as source_folder)
-destination_folder = r"C:\Users\ymasr\OneDrive\Desktop\yearr"
+source_folder = 'gcoos_platform_water_temperature_csvs'
+
+# Create a new folder named 'years' which will hold your subyear folders
+destination_folder = 'years'
 
 # Ensure the destination folder exists
 if not os.path.exists(destination_folder):
@@ -12,10 +13,10 @@ if not os.path.exists(destination_folder):
 
 # Loop through each file in the source folder
 for filename in os.listdir(source_folder):
-    # Check if the file is a CSV file and if it contains a year between 2011 and 2024
+    # Check if the file is a CSV file and if it contains a year between 1995 and 2024
     if filename.endswith('.csv'):
         # Extract the year from the filename if it appears in YYYY format
-        for year in range(1995, 2025):
+        for year in range(1995, 2024):
             if str(year) in filename:
                 # Create a folder for the year if it doesn't already exist
                 year_folder = os.path.join(destination_folder, str(year))
