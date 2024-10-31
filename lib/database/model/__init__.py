@@ -8,4 +8,4 @@ from .SensorDevice import SensorDevice
 from .SensorReading import SensorReading
 
 
-__all__ = [SensorDevice]
+__all__ = ["SensorDevice","SensorReading"]
