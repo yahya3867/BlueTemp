@@ -205,10 +205,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## The Team
 
-Tayven Stover - [![LinkedIn][linkedin-shield]][linkedin-url-t] - tayven@tayven-stover.com
-Yahya Masri - [![LinkedIn][linkedin-shield]][linkedin-url-y]
-Gian Sung - [![LinkedIn][linkedin-shield]][linkedin-url-g]
-Theodore Spanbauer - [![LinkedIn][linkedin-shield]][linkedin-url-theo]
+Tayven Stover - [![LinkedIn][linkedin-shield]][linkedin-url-t] - tayven@tayven-stover.com  
+Yahya Masri - [![LinkedIn][linkedin-shield]][linkedin-url-y]  
+Gian Sung - [![LinkedIn][linkedin-shield]][linkedin-url-g]  
+Theodore Spanbauer - [![LinkedIn][linkedin-shield]][linkedin-url-theo]  
 Project Link: [https://github.com/yahya3867/HorizonHacks2024](https://github.com/yahya3867/HorizonHacks2024)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
