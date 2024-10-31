@@ -36,7 +36,7 @@
 <h3 align="center">BlueTemp</h3>
 
   <p align="center">
-    A deep learning platform designed with the intention of predicting water temperature. Water temperature is a crucial variable in the global oceanic ecosystem. Therefore, it is imperative that we have bleeding edge technology designed with the sole intention of understanding these systems.
+    A deep learning platform designed with the intention of predicting sea water temperature. Water temperature is a crucial variable in the global marine ecosystem. Therefore, it is imperative that we have bleeding edge technology designed with the sole intention of understanding these systems.
     <br />
     <a href="https://github.com/yahya3867/BlueTemp"><strong>Explore the docs »</strong></a>
     <br />
