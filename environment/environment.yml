@@ -1,0 +1,16 @@
+name: Hackathon2024
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - cython
+  - flask-sqlalchemy
+  - flask=3.0
+  - flask-session
+  - pandas
+  - pymysql
+  - sqlalchemy=1.4.*
+  - matplotlib
+  - python=3.10.*
+  - python-dotenv
+
