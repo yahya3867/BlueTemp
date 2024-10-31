@@ -206,7 +206,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## The Team
 
 Tayven Stover - [![LinkedIn][linkedin-shield]][linkedin-url-t] - tayven@tayven-stover.com
-
+Yahya Masri - [![LinkedIn][linkedin-shield]][linkedin-url-y]
+Gian Sung - [![LinkedIn][linkedin-shield]][linkedin-url-g]
+Theodore Spanbauer - [![LinkedIn][linkedin-shield]][linkedin-url-theo]
 Project Link: [https://github.com/yahya3867/HorizonHacks2024](https://github.com/yahya3867/HorizonHacks2024)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -238,6 +240,9 @@ Project Link: [https://github.com/yahya3867/HorizonHacks2024](https://github.com
 [license-url]: https://github.com/yahya3867/HorizonHacks2024/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url-t]: https://www.linkedin.com/in/tayven-stover-8bb62a268/
+[linkedin-url-y]: https://www.linkedin.com/in/yahya-masri
+[linkedin-url-g]: https://www.linkedin.com/in/jglsung/
+[linkedin-url-theo]: https://www.linkedin.com/in/theodore-spanbauer-9b7313253/
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
