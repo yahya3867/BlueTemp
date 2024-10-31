@@ -1,3 +1,6 @@
 .env
 machine-learning/data
 .DS_Store
+.flaskenv
+flask_session
+__pycache__
