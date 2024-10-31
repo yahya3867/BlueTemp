@@ -6,7 +6,7 @@ import os
 base_url = "https://data.gcoos.org/data/waf/csv_by_platform/"
 
 # Directory to save downloaded files
-os.makedirs("/gcoos_platform_water_temperature_csvs", exist_ok=True)
+os.makedirs("gcoos_platform_water_temperature_csvs", exist_ok=True)
 
 # Function to get all subdirectories for each year
 def get_year_directories():
