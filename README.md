@@ -29,7 +29,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/yahya3867/HorizonHacks2024">
+  <a href="https://github.com/yahya3867/BlueTemp">
     <img src="resources/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -38,14 +38,14 @@
   <p align="center">
     A deep learning platform designed with the intention of predicting water temperature. Water temperature is a crucial variable in the global oceanic ecosystem. Therefore, it is imperative that we have bleeding edge technology designed with the sole intention of understanding these systems.
     <br />
-    <a href="https://github.com/yahya3867/HorizonHacks2024"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/yahya3867/BlueTemp"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/yahya3867/HorizonHacks2024">View Demo</a>
+    <a href="https://github.com/yahya3867/BlueTemp">View Demo</a>
     ·
-    <a href="https://github.com/yahya3867/HorizonHacks2024/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/yahya3867/BlueTemp/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/yahya3867/HorizonHacks2024/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/yahya3867/BlueTemp/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -124,7 +124,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/yahya3867/HorizonHacks2024.git
+   git clone https://github.com/yahya3867/BlueTemp.git
    ```
 3. Install NPM packages
    ```sh
@@ -136,7 +136,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 5. Change git remote url to avoid accidental pushes to base project
    ```sh
-   git remote set-url origin yahya3867/HorizonHacks2024
+   git remote set-url origin yahya3867/BlueTemp
    git remote -v # confirm the changes
    ```
 
@@ -163,7 +163,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/yahya3867/HorizonHacks2024/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/yahya3867/BlueTemp/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -187,8 +187,8 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/yahya3867/HorizonHacks2024/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=yahya3867/HorizonHacks2024" alt="contrib.rocks image" />
+<a href="https://github.com/yahya3867/BlueTemp/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=yahya3867/BlueTemp" alt="contrib.rocks image" />
 </a>
 
 
@@ -209,7 +209,7 @@ Tayven Stover - [![LinkedIn][linkedin-shield]][linkedin-url-t] - tayven@tayven-s
 Yahya Masri - [![LinkedIn][linkedin-shield]][linkedin-url-y]  
 Gian Sung - [![LinkedIn][linkedin-shield]][linkedin-url-g]  
 Theodore Spanbauer - [![LinkedIn][linkedin-shield]][linkedin-url-theo]  
-Project Link: [https://github.com/yahya3867/HorizonHacks2024](https://github.com/yahya3867/BlueTemp)
+Project Link: [https://github.com/yahya3867/BlueTemp](https://github.com/yahya3867/BlueTemp)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -227,16 +227,16 @@ Project Link: [https://github.com/yahya3867/HorizonHacks2024](https://github.com
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/yahya3867/HorizonHacks2024.svg?style=for-the-badge
-[contributors-url]: https://github.com/yahya3867/HorizonHacks2024/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/yahya3867/HorizonHacks2024.svg?style=for-the-badge
-[forks-url]: https://github.com/yahya3867/HorizonHacks2024/network/members
-[stars-shield]: https://img.shields.io/github/stars/yahya3867/HorizonHacks2024.svg?style=for-the-badge
-[stars-url]: https://github.com/yahya3867/HorizonHacks2024/stargazers
-[issues-shield]: https://img.shields.io/github/issues/yahya3867/HorizonHacks2024.svg?style=for-the-badge
-[issues-url]: https://github.com/yahya3867/HorizonHacks2024/issues
-[license-shield]: https://img.shields.io/github/license/yahya3867/HorizonHacks2024.svg?style=for-the-badge
-[license-url]: https://github.com/yahya3867/HorizonHacks2024/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/yahya3867/BlueTemp.svg?style=for-the-badge
+[contributors-url]: https://github.com/yahya3867/BlueTemp/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/yahya3867/BlueTemp.svg?style=for-the-badge
+[forks-url]: https://github.com/yahya3867/BlueTemp/network/members
+[stars-shield]: https://img.shields.io/github/stars/yahya3867/BlueTemp.svg?style=for-the-badge
+[stars-url]: https://github.com/yahya3867/BlueTemp/stargazers
+[issues-shield]: https://img.shields.io/github/issues/yahya3867/BlueTemp.svg?style=for-the-badge
+[issues-url]: https://github.com/yahya3867/BlueTemp/issues
+[license-shield]: https://img.shields.io/github/license/yahya3867/BlueTemp.svg?style=for-the-badge
+[license-url]: https://github.com/yahya3867/BlueTemp/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url-t]: https://www.linkedin.com/in/tayven-stover-8bb62a268/
 [linkedin-url-y]: https://www.linkedin.com/in/yahya-masri
