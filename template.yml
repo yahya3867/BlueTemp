@@ -1,0 +1,44 @@
+services:
+  web:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    #environment:
+      #FLASK_ENV: development
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    environment:
+      #MYSQL_DATABASE: mydb
+      #MYSQL_USER: myuser
+      #MYSQL_PASSWORD: mypassword
+      #MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db/data:/var/lib/mysql  # Persist MySQL data
+    expose:
+      - "3306"
+
+  # data_retriever:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.data
+  #   volumes:
+  #     - ./data:/app/data
+

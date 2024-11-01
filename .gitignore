@@ -1,5 +1,12 @@
+# Environment Variable
 .env
+
+# Directories
 machine-learning/data
+data-retriever/data
+data-retriever/log
+
+# Backend
 .DS_Store
 .flaskenv
 flask_session
