@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.map_container {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    height: 100%;
+    width: 70%;
+}
+
+.chart_container {
+    padding: 10px;
+    height: 70%;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    resize: true;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.chart_box {
+    height: 100%;
+    width: 70%;
+}
+
+.chart {
+    height: auto;
+    width: 100%;
+}
+
+.controls_container {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.controls_box {
+    width: 70%;
+    border: solid 2px black;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}

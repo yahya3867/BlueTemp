@@ -1,6 +1,7 @@
 # Environment Variable
 .env
 
+<<<<<<< HEAD
 # Directories
 machine-learning/data
 docker/data-retriever/data
@@ -11,3 +12,7 @@ docker/data-retriever/log
 .flaskenv
 flask_session
 __pycache__
+=======
+# Local Netlify folder
+.netlify
+>>>>>>> bc6fc8b (tool ui)
