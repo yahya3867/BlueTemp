@@ -1,4 +1,4 @@
-name: Hackathon2024
+name: HorizonHacks2024 
 channels:
   - conda-forge
   - defaults
