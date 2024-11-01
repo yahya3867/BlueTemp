@@ -1,12 +1,46 @@
 services:
-  data-retriever:
+
+# NGINX
+
+
+# Blue Temp App
+  bluetemp:
     build:
-      context: ./data-retriever  # Specify the Dockerfile location
-    container_name: data-retriever
-    volumes:
-      - ./data-retriever/data:/data-retriever/data # Map the local data folder
-      - ./data-retriever/log:/data-retriever/logs
+      context: ./
+      dockerfile: docker/app/Dockerfile
+    container_name: bluetemp
     restart: on-failure
-    environment:
-      - PYTHONUNBUFFERED=1
+    
+    # volumes:
+    #   - ./example:/bluetemp/example
+  
+    ports:
+      - "5000:5000"
+    networks:
+      - btemp-backend
+    env_file:
+      - ./.env
+
+# Database
+
+
+# Data Retriver Script
+  #  data-retriever:
+  #    build:
+  #      context: ./data-retriever  # Specify the Dockerfile location
+  #    container_name: data-retriever
+  #    volumes:
+  #      - ./data-retriever/data:/data-retriever/data # Map the local data folder
+  #      - ./data-retriever/log:/data-retriever/logs
+  #    restart: on-failure
+  #    environment:
+  #      - PYTHONUNBUFFERED=1
+
+networks:
+  btemp-backend:
+    name: btemp-backend
+    driver: bridge
+  btemp-frontend:
+    name: btemp-frontend
+    driver: bridge
 
