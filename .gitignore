@@ -3,8 +3,8 @@
 
 # Directories
 machine-learning/data
-data-retriever/data
-data-retriever/log
+docker/data-retriever/data
+docker/data-retriever/log
 
 # Backend
 .DS_Store
