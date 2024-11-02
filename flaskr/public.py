@@ -95,6 +95,7 @@ def process_upload_data():
             csv_data = load_csv_data(file_dir,COVARIATE_COLUMNS)
             sensors = get_unique_sensors(csv_data)
             for sensor in sensors:
+                print(sensor)
                 sensor_device_obj = sensor_device_service.get_by_name(sensor)
                 if sensor_device_obj is None:
                     sensor_device_obj = SensorDevice(str(sensor),
@@ -107,6 +108,5 @@ def process_upload_data():
                 csv_data.rename(columns={'platform': 'sensor_id', 'sea_water_temperature':'target_reading'}, inplace=True)
                 sensor_reading_service.add_rows(csv_data)
         except:
-            break
             continue
     return {'status':200}
