@@ -29,11 +29,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/yahya3867/BlueTemp">
-    <img src="resources/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/yahya3867/BlueTemp/blob/main/static/images/new_logo.png">
+    <img src="https://github.com/yahya3867/BlueTemp/blob/main/static/images/new_logo.png"  style="height: 400px" alt="BlueTemp"  />
   </a>
+</div>
 
-<h3 align="center">BlueTemp</h3>
 
   <p align="center">
     A deep learning platform designed with the intention of predicting sea water temperature. Water temperature is a crucial variable in the global marine ecosystem. Therefore, it is imperative that we have bleeding edge technology designed with the sole intention of understanding these systems.
@@ -57,9 +57,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -73,23 +70,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![BlueTemp][product-screenshot]](https://github.com/yahya3867/BlueTemp/blob/main/static/images/new_logo.png)
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,8 +179,11 @@ We would like to acknowledge the data provider NOAA GCOOS for the data. (https:/
 [linkedin-url-g]: https://www.linkedin.com/in/jglsung/
 [linkedin-url-theo]: https://www.linkedin.com/in/theodore-spanbauer-9b7313253/
 [product-screenshot]: https://github.com/yahya3867/BlueTemp/blob/main/static/images/new_logo.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
+
+
+
+[python]: https://github.com/yahya3867/BlueTemp/blob/main/static/images/builtwith_logos/python.svg
+[python-url]: https://www.python.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
