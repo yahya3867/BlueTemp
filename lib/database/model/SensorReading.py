@@ -33,6 +33,7 @@ class SensorReading(BaseModel):
 
     # Type Hinting all class attributes
     # for this database table
+    id : int
     date : datetime
     latitude: float
     longitude: float

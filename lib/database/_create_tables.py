@@ -50,11 +50,12 @@ def create_database_tables(engine: Engine) -> bool:
     sensor_reading_table = Table(
         "sensor_readings",
         metadata,
+        Column("id", Integer, primary_key=True, autoincrement=True),
         Column("date", DateTime, nullable=False),
         Column("latitude", Float, nullable=False),
         Column("longitude", Float, nullable=False),
         Column("target_reading", Float, nullable=False),
-        Column("sensor_id", Integer, ForeignKey("sensor_devices.id"), primary_key=True, nullable=False))
+        Column("sensor_id", Integer, ForeignKey("sensor_devices.id"), nullable=False))
 
     # Mapping the relationships of the SensorDevice table
     # Sets the foreign key for sensor readings table

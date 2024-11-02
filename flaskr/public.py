@@ -73,6 +73,7 @@ def process_upload_data():
             #df.loc[df['A'] == 2, 'B'] = 'new_y'
             csv_data.loc[csv_data['platform'] == sensor, 'platform'] = sensor_id
             csv_data.rename(columns={'platform': 'sensor_id', 'sea_water_temperature':'target_reading'}, inplace=True)
+            print(csv_data)
             sensor_reading_service.add_rows(csv_data)
         break
     return {'status':200}
