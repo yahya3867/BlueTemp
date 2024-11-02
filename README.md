@@ -73,7 +73,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![BlueTemp][product-screenshot]](https://example.com)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -195,7 +195,7 @@ We would like to acknowledge the data provider NOAA GCOOS for the data. (https:/
 [linkedin-url-y]: https://www.linkedin.com/in/yahya-masri
 [linkedin-url-g]: https://www.linkedin.com/in/jglsung/
 [linkedin-url-theo]: https://www.linkedin.com/in/theodore-spanbauer-9b7313253/
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://github.com/yahya3867/BlueTemp/blob/main/static/images/new_logo.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
