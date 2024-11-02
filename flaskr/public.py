@@ -97,12 +97,16 @@ def process_upload_data():
             for sensor in sensors:
                 sensor_device_obj = sensor_device_service.get_by_name(sensor)
                 if sensor_device_obj is None:
-                    sensor_device_obj = SensorDevice(str(sensor), "celsius")
+                    sensor_device_obj = SensorDevice(str(sensor),
+                                                     "celsius",
+                                                     csv_data.where(csv_data['platform'] == sensor).head(1)['latitude'][0],
+                                                     csv_data.where(csv_data['platform'] == sensor).head(1)['longitude'][0])
                     sensor_device_obj = sensor_device_service.add_device(sensor_device_obj)
                 sensor_id = sensor_device_obj.id
                 csv_data.loc[csv_data['platform'] == sensor, 'platform'] = sensor_id
                 csv_data.rename(columns={'platform': 'sensor_id', 'sea_water_temperature':'target_reading'}, inplace=True)
                 sensor_reading_service.add_rows(csv_data)
         except:
+            break
             continue
     return {'status':200}

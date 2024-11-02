@@ -27,12 +27,18 @@ class SensorDevice(BaseModel):
     id: int
     name : str
     target_reading_type: str
+    latitude: float
+    longitude: float
 
     # Initializing the attributes in
     # the pythonic class
     def __init__(self,
                  name,
-                 target_reading_type):
+                 target_reading_type,
+                 latitude,
+                 longitude):
         self.name = name
         self.target_reading_type = target_reading_type
+        self.latitude = latitude
+        self.longitude = longitude
 

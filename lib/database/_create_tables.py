@@ -43,7 +43,9 @@ def create_database_tables(engine: Engine) -> bool:
                                 metadata,
                                 Column("id", Integer, primary_key=True, autoincrement=True),
                                 Column("name", String(50), nullable=False, unique=True),
-                                Column("target_reading_type", String(50), nullable=False)
+                                Column("target_reading_type", String(50), nullable=False),
+                                Column("latitude", Float, nullable=False),
+                                Column("longitude", Float, nullable=False)
                                 )
 
     # Creating the map for the sensor reading values
