@@ -182,9 +182,7 @@ Project Link: [https://github.com/yahya3867/BlueTemp](https://github.com/yahya38
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+- [ ] We would like to acknowledge the data provider NOAA GCOOS for the data. (https://ioos.noaa.gov/regions/gcoos/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
