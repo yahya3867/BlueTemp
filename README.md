@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/yahya3867/BlueTemp/blob/main/static/images/new_logo.png">
-    <img src="https://github.com/yahya3867/BlueTemp/blob/main/static/images/new_logo.png"  style="height: 400px" alt="BlueTemp"  />
+    <img src="https://github.com/yahya3867/BlueTemp/blob/main/static/images/new_logo.png"  style="height: 100px" alt="BlueTemp"  />
   </a>
 </div>
 
