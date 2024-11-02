@@ -70,6 +70,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+Our inspiration for BlueTemp stemmed from the devastating impact of Hurricane Milton, which rapidly, unexpectedly intensified over the unusually warm waters of the Gulf of Mexico. The recent rapid intensification of storms like Hurricane Milton over unusually warm waters in the Gulf of Mexico made it clear that even slight increases in sea water temperature can fuel destructive weather events and disrupt marine ecosystems. BlueTemp forecasts sea water temperatures, providing data that helps scientists anticipate extreme events like hurricanes and protect vulnerable ecosystems. From monitoring coral bleaching to predicting hurricanes, the need for precise, real-time sea temperature data has never been greater. BlueTemp was born out of this realization, aiming to empower scientists and environmentalists with accurate forecasts to protect marine environments.
+
 
 
 
