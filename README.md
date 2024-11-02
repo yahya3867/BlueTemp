@@ -73,7 +73,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![BlueTemp][product-screenshot]](https://example.com)
+[![BlueTemp][product-screenshot]](https://github.com/yahya3867/BlueTemp/blob/main/static/images/new_logo.png)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
