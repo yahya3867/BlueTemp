@@ -171,7 +171,7 @@ We would like to acknowledge the data provider NOAA GCOOS for the data. (https:/
 [contributors-shield]: https://img.shields.io/github/contributors/yahya3867/BlueTemp.svg?style=for-the-badge
 [contributors-url]: https://github.com/yahya3867/BlueTemp/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/yahya3867/BlueTemp.svg?style=for-the-badge
-[forks-url]: https://github.com/yahya3867/BlueTemp/network/members
+[forks-url]: https://github.com/yahya3867/BlueTemp/forks
 [stars-shield]: https://img.shields.io/github/stars/yahya3867/BlueTemp.svg?style=for-the-badge
 [stars-url]: https://github.com/yahya3867/BlueTemp/stargazers
 [issues-shield]: https://img.shields.io/github/issues/yahya3867/BlueTemp.svg?style=for-the-badge
