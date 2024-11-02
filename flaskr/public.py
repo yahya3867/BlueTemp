@@ -25,7 +25,7 @@ def homepage():
         render_template: Renders the homepage/home
         html
     """
-    return render_template("base.html")
+    return render_template("index.html")
 
 @PUBLIC.route("/demo", methods=["GET", "POST"])
 def demo():
