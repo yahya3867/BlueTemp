@@ -162,3 +162,13 @@ def _cleanse_df_blocks(df, block_size = 24):
     df_cleaned = df_cleaned.drop(columns=['block'])
 
     return df_cleaned
+
+def clean_temp_data_vals(df):
+    if 'sea_water_temperature' in df.columns:
+        # Remove rows with NaN values in sea_water_temperature
+        df = df.dropna(subset=['sea_water_temperature'])
+        
+        # Remove rows where sea_water_temperature is outside the range 10-50 Celsius
+        df = df[(df['sea_water_temperature'] >= 10) & (df['sea_water_temperature'] <= 50)]
+    
+    return df
