@@ -38,10 +38,16 @@ def get_prediction_by_sensor():
     """
     # Loading Database
     db = get_db()
-
-    sensor_name = request.args.get("sensor_name")
-    prediction_range = request.args.get("prediction_range")
-    
+    sensor_device_service = db.sensor_device_service
+    sensor_reading_service = db.sensor_reading_service
+    sensor_name = request.args.get("sensor_name", default=None)
+    prediction_range_low = request.args.get("prediction_range_low")
+    prediction_range_high = request.args.get("prediction_range_high")
+    sensor_device_obj = sensor_device_service.get_by_name(sensor_name)
+    start_date = datetime.strptime(prediction_range_low, "%Y-%m-%d")
+    end_date = datetime.strptime(prediction_range_high, "%Y-%m-%d")
+    df = sensor_reading_service.get_by_date_sensor(start_date, end_date, sensor_id=sensor_device_obj.id)
+    return {'status':200}
     # Call to Model API
 
 @PUBLIC.route("/processUploadData", methods=["GET", "POST"])
@@ -63,17 +69,12 @@ def process_upload_data():
         csv_data = load_csv_data(file_dir,COVARIATE_COLUMNS)
         sensors = get_unique_sensors(csv_data)
         for sensor in sensors:
-            print(sensor)
             sensor_device_obj = sensor_device_service.get_by_name(sensor)
-            print(sensor_device_obj)
             if sensor_device_obj is None:
                 sensor_device_obj = SensorDevice(str(sensor), "celsius")
                 sensor_device_obj = sensor_device_service.add_device(sensor_device_obj)
             sensor_id = sensor_device_obj.id
-            #df.loc[df['A'] == 2, 'B'] = 'new_y'
             csv_data.loc[csv_data['platform'] == sensor, 'platform'] = sensor_id
             csv_data.rename(columns={'platform': 'sensor_id', 'sea_water_temperature':'target_reading'}, inplace=True)
-            print(csv_data)
             sensor_reading_service.add_rows(csv_data)
-        break
     return {'status':200}

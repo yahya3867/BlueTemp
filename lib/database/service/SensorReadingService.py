@@ -50,3 +50,16 @@ class SensorReadingService(BaseService):
 
         # Adding the sensor reading to database
         return self.repo.add_dataframe_bulk(dataframe)
+    
+    def get_by_date_sensor(self, start_date, end_date, sensor_id) -> SensorReading:
+        """Service function for retrieving a sensor device row by matching the name.
+
+        Args:
+            sensor_device_name (str): The name of the sensor device
+
+        Returns:
+            SensorDevice: The database model object for SensorDevice.
+        """
+
+        # Getting the SensorDevice object
+        return self.repo.get_reading_by_date_sensor(start_date, end_date, sensor_id)
