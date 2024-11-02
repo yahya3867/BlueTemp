@@ -29,7 +29,7 @@ def create_app():
         Flask: The Flask app
     """
     # create and configure the app
-    app = Flask(__name__, template_folder="../templates", static_folder="../static")
+    app = Flask(__name__, template_folder="../dist", static_folder="../dist")
     app.config.from_object("config.Config")
 
     app.jinja_env.autoescape = False

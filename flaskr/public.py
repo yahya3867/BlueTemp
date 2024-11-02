@@ -25,7 +25,18 @@ def homepage():
         render_template: Renders the homepage/home
         html
     """
-    return render_template("homepage/home.html")
+    return render_template("base.html")
+
+@PUBLIC.route("/demo", methods=["GET", "POST"])
+def demo():
+    """API ENDPOINT
+    The endpoint for rendering the demo page
+
+    Returns:
+        render_template: Renders the tool
+        html
+    """
+    return render_template("tool.html")
 
 
 @PUBLIC.route("/getPredictionBySensor", methods=["GET", "POST"])
