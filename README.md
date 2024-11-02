@@ -127,10 +127,11 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/yahya3867/BlueTemp/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=yahya3867/BlueTemp" alt="contrib.rocks image" />
-</a>
-
+<div align="center">
+  <a href="https://github.com/yahya3867/BlueTemp/blob/main/static/images/group_photo.JPG">
+    <img src="https://github.com/yahya3867/BlueTemp/blob/main/static/images/group_photo.JPG"  style="height: 400px" alt="BlueTemp"  />
+  </a>
+</div>
 
 
 <!-- LICENSE -->
