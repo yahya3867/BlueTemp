@@ -16,7 +16,7 @@ RUN conda env create -f environment.yml
 # Copy rest of app code
 COPY ./flaskr /bluetemp/flaskr
 COPY ./templates /bluetemp/templates
-COPY ./static /bluetemp/static
+COPY ./dist /bluetemp/dist
 COPY ./lib /bluetemp/lib
 COPY ./config.py /bluetemp/config.py
 COPY ./app.py /bluetemp/app.py

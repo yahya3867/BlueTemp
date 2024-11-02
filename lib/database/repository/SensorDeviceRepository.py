@@ -20,3 +20,6 @@ class SensorDeviceRepository(BaseRepository):
     def __init__(self, session: Session, engine):
         # Initializes the base repository class
         super().__init__(session=session, model=SensorDevice, table_name="sensor_devices", engine=engine)
+    
+    def all_sensors(self):
+        return self.session.query(SensorDevice).all()

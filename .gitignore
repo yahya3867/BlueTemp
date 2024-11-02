@@ -12,5 +12,5 @@ docker/data-retriever/log
 flask_session
 __pycache__
 waterTemp_sensorData
-
+data
 models.zip

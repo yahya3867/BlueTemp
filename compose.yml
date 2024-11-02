@@ -14,17 +14,40 @@ services:
     volumes:
       - ./templates:/bluetemp/templates
       - ./flaskr:/bluetemp/flaskr
-      - ./static:/bluetemp/static
+      - ./dist:/bluetemp/dist
+      - ./lib:/bluetemp/lib
+      - ./data:/bluetemp/data
     ports:
       - "5000:5000"
     networks:
       - btemp-backend
     env_file:
       - ./.env
+    depends_on:
+      - dbtemp
 
 # Database
 
-
+  dbtemp:
+    container_name: dbtemp
+    build: ./docker/db/
+    volumes:
+      - appdb-data:/var/lib/mysql
+    expose:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=${DB}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_USER=${MYSQL_ROOT_USER}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-hdbx", "-u'$MYSQL_ROOT_USER'", "-p'$MYSQL_ROOT_PASSWORD'"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+    networks:
+      - btemp-backend
 # Data Retriver Script
   #  data-retriever:
   #    build:
@@ -36,6 +59,8 @@ services:
   #    restart: on-failure
   #    environment:
   #      - PYTHONUNBUFFERED=1
+volumes:
+  appdb-data:
 
 networks:
   btemp-backend:

@@ -7,7 +7,7 @@ dependencies:
   - flask-sqlalchemy
   - flask=3.0
   - flask-session
-  - pandas
+  - pandas==2.1.4
   - pymysql
   - sqlalchemy=1.4.*
   - matplotlib

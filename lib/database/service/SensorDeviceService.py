@@ -49,3 +49,6 @@ class SensorDeviceService(BaseService):
 
         # Getting the SensorDevice object
         return self.repo.get_first_by_args(name=sensor_device_name)
+
+    def get_all_sensors(self):
+        return self.repo.all_sensors()

@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 # Python Third Party Imports
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, jsonify
 
 # Local Library Imports
 from .database import get_db
@@ -67,6 +67,13 @@ def get_prediction_by_sensor():
     return {'status':200}
     # Call to Model API
 
+@PUBLIC.route("/getAllSensors", methods=["GET", "POST"])
+def get_all_sensors():
+    db = get_db()
+    sensor_device_service = db.sensor_device_service
+    sensor_device_obj_list = sensor_device_service.get_all_sensors()
+    return jsonify(sensor_device_obj_list)
+
 @PUBLIC.route("/processUploadData", methods=["GET", "POST"])
 def process_upload_data():
     """API ENDPOINT
@@ -79,19 +86,23 @@ def process_upload_data():
     db = get_db()
     sensor_device_service = db.sensor_device_service
     sensor_reading_service = db.sensor_reading_service
-    data_dir = request.args.get("data_dir", default=None, type=str) #TODO Add directory for loading data
+    #data_dir = request.args.get("data_dir", default=None, type=str) #TODO Add directory for loading data
+    data_dir = "data"
     COVARIATE_COLUMNS = ['latitude', 'longitude', 'date', 'sea_water_temperature', 'platform']
     for file in os.listdir(data_dir):
-        file_dir = os.path.join(data_dir, file)
-        csv_data = load_csv_data(file_dir,COVARIATE_COLUMNS)
-        sensors = get_unique_sensors(csv_data)
-        for sensor in sensors:
-            sensor_device_obj = sensor_device_service.get_by_name(sensor)
-            if sensor_device_obj is None:
-                sensor_device_obj = SensorDevice(str(sensor), "celsius")
-                sensor_device_obj = sensor_device_service.add_device(sensor_device_obj)
-            sensor_id = sensor_device_obj.id
-            csv_data.loc[csv_data['platform'] == sensor, 'platform'] = sensor_id
-            csv_data.rename(columns={'platform': 'sensor_id', 'sea_water_temperature':'target_reading'}, inplace=True)
-            sensor_reading_service.add_rows(csv_data)
+        try:
+            file_dir = os.path.join(data_dir, file)
+            csv_data = load_csv_data(file_dir,COVARIATE_COLUMNS)
+            sensors = get_unique_sensors(csv_data)
+            for sensor in sensors:
+                sensor_device_obj = sensor_device_service.get_by_name(sensor)
+                if sensor_device_obj is None:
+                    sensor_device_obj = SensorDevice(str(sensor), "celsius")
+                    sensor_device_obj = sensor_device_service.add_device(sensor_device_obj)
+                sensor_id = sensor_device_obj.id
+                csv_data.loc[csv_data['platform'] == sensor, 'platform'] = sensor_id
+                csv_data.rename(columns={'platform': 'sensor_id', 'sea_water_temperature':'target_reading'}, inplace=True)
+                sensor_reading_service.add_rows(csv_data)
+        except:
+            continue
     return {'status':200}
