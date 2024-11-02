@@ -31,13 +31,6 @@ class Config:
     # Database
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://'+environ.get('MYSQL_ROOT_USER')+':'+environ.get('MYSQL_ROOT_PASSWORD')+'@'+environ.get('HOST')+':'+environ.get('DB_PORT')+'/'+environ.get('DB')
 
-
-    # Adding binds
-#    SQLALCHEMY_BINDS = {
-#                        'keycloak': 'mysql+pymysql://'+environ.get('MYSQL_ROOT_USER')+':'+environ.get('MYSQL_ROOT_PASSWORD')+'@'+environ.get('HOST')+':'+environ.get('DB_PORT')+'/'+environ.get('OAUTH_DB')
-#                        }
-
-
     JWT_SECRETE_KEY = environ.get('JWT_SECRETE_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = True

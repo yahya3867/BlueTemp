@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueTemp</title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+    <div class="main_container">
+        <div class="map_container">
+            <div id="map"></div>
+        </div>
+        <div class="controls_container">
+            <div class="controls_box">
+                <select name="sensor_select" id="">
+                    <option value="1">Sensor 1</option>
+                    <option value="2">Sensor 2</option>
+                    <option value="3">Sensor 3</option>
+                    <option value="4">Sensor 4</option>
+                </select>
+                <input type="date" name="start-date" id="">
+                <input type="date" name="end-date" id="">
+                <button>Predict</button>
+            </div>
+        </div>
+        <div class="chart_container">
+            <div class="chart_box">
+                <canvas id="chart" class="chart"></canvas>
+            <div id="resize_chart"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="engine.js"></script>
+</body>
+</html>
