@@ -1,8 +1,8 @@
-var map = L.map('map').setView([25.3043, -90.0659], 7);
+var map = L.map('map').setView([25.3043, -90.0659], 5);
 
 // Add OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 5,
+    maxZoom: 10
 }).addTo(map);
 
 const ctx = document.getElementById('chart').getContext('2d');
