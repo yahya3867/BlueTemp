@@ -53,18 +53,18 @@ def get_prediction_by_sensor():
     sensor_device_service = db.sensor_device_service
     sensor_reading_service = db.sensor_reading_service
     # Name of Sensor
-    sensor_name = request.args.get("sensor_name", default=None)
+    sensor_name = request.args.get("sensor_name")
 
     # Start and End Dates
-    prediction_range_low = request.args.get("prediction_range_low")
-    prediction_range_high = request.args.get("prediction_range_high")
-
+    prediction_range_low = request.args.get("startDate")
+    prediction_range_high = request.args.get("endDate")
+    print(sensor_name)
     # "2010-01-01 1:01:01" example date range format
     sensor_device_obj = sensor_device_service.get_by_name(sensor_name)
-    start_date = datetime.strptime(prediction_range_low, "%Y-%m-%d %H:%M:%S")
-    end_date = datetime.strptime(prediction_range_high, "%Y-%m-%d %H:%M:%S")
+    start_date = datetime.strptime(prediction_range_low, "%Y-%m-%d")
+    end_date = datetime.strptime(prediction_range_high, "%Y-%m-%d")
     df = sensor_reading_service.get_by_date_sensor(start_date, end_date, sensor_id=sensor_device_obj.id)
-    return {'status':200}
+    return {'status':200, 'data':df.to_json()}
     # Call to Model API
 
 @PUBLIC.route("/getAllSensors", methods=["GET", "POST"])
