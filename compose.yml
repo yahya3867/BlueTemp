@@ -11,9 +11,10 @@ services:
     container_name: bluetemp
     restart: on-failure
     
-    # volumes:
-    #   - ./example:/bluetemp/example
-  
+    volumes:
+      - ./templates:/bluetemp/templates
+      - ./flaskr:/bluetemp/flaskr
+      - ./static:/bluetemp/static
     ports:
       - "5000:5000"
     networks:

@@ -25,6 +25,7 @@ def homepage():
         render_template: Renders the homepage/home
         html
     """
+<<<<<<< Updated upstream
     return render_template("homepage/home.html")
 
 
@@ -76,3 +77,6 @@ def process_upload_data():
             sensor_reading_service.add_rows(csv_data)
         break
     return {'status':200}
+=======
+    return render_template("homepage/base.html")
+>>>>>>> Stashed changes
