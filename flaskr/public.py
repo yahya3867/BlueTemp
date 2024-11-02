@@ -68,7 +68,7 @@ def process_upload_data():
     db = get_db()
     sensor_device_service = db.sensor_device_service
     sensor_reading_service = db.sensor_reading_service
-    data_dir = "waterTemp_sensorData/" #TODO Add directory for loading data
+    data_dir = request.args.get("data_dir", default=None, type=str) #TODO Add directory for loading data
     COVARIATE_COLUMNS = ['latitude', 'longitude', 'date', 'sea_water_temperature', 'platform']
     for file in os.listdir(data_dir):
         file_dir = os.path.join(data_dir, file)
