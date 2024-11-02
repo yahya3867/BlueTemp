@@ -4,6 +4,10 @@ body, html {
     padding: 0;
 }
 
+.main_container {
+    margin-top: 6em;
+}
+
 .map_container {
     height: 70%;
     width: 100%;
