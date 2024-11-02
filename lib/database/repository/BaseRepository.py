@@ -21,11 +21,12 @@ class BaseRepository:
         model (Any): The Python model class for the database.
     """
 
-    def __init__(self, session: Session, table_name: str, model):
+    def __init__(self, session: Session, table_name: str, model, engine):
         self.session: Session = session
         self.table_name: str = table_name
         self.model = model
         self.attributes = self.model.__annotations__.keys()
+        self.engine = engine
 
     def commit_changes(self) -> bool:
         """Utility function to commit changes to the database."""

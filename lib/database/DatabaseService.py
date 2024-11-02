@@ -105,8 +105,8 @@ class DatabaseService:
     def _setup_services(self) -> bool:
         try:
             # Setting up the database table services
-            self.sensor_device_service = SensorDeviceService(self.session)
-            self.sensor_reading_service = SensorReadingService(self.session)
+            self.sensor_device_service = SensorDeviceService(self.session, self.engine)
+            self.sensor_reading_service = SensorReadingService(self.session, self.engine)
             return True
         except (SQLAlchemyError, DatabaseError,
                 DBAPIError, RuntimeError) as error:

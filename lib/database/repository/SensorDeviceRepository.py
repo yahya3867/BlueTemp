@@ -17,6 +17,6 @@ class SensorDeviceRepository(BaseRepository):
         to use for querying and commiting changes.
     """
 
-    def __init__(self, session: Session):
+    def __init__(self, session: Session, engine):
         # Initializes the base repository class
-        super().__init__(session=session, model=SensorDevice, table_name="sensor_devices")
+        super().__init__(session=session, model=SensorDevice, table_name="sensor_devices", engine=engine)

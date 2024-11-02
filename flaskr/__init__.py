@@ -35,16 +35,17 @@ def create_app():
     app.jinja_env.autoescape = False
 
     app.jinja_env.globals["WEBSITE_NAME"] = app.config["WEBSITE_NAME"]
+
     app.jinja_env.globals["WEBSITE_EMAIL"] = app.config["WEBSITE_EMAIL"]
     app.jinja_env.globals["WEBSITE_LOGO"] = app.config["WEBSITE_LOGO"]
 
     # App session setup
     app_session = Session()
     app_session.init_app(app)
-    #app.database_service = DatabaseService(app.config["SQLALCHEMY_DATABASE_URI"])
+    app.database_service = DatabaseService(app.config["SQLALCHEMY_DATABASE_URI"])
 
     # Initializing the database
-    #database.init_app(app)
+    database.init_app(app)
 
     # Registering the Blueprint APIs
     app.register_blueprint(PUBLIC)

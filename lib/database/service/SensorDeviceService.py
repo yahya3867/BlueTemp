@@ -16,13 +16,13 @@ class SensorDeviceService(BaseService):
     the repository classes.
     """
 
-    def __init__(self, session: Session):
+    def __init__(self, session: Session, engine):
         # Initializing the repository and distributing the
         # database session
-        super().__init__(session, SensorDeviceRepository)
+        super().__init__(session, SensorDeviceRepository, engine)
         self.repo: SensorDeviceRepository
 
-    def add_image(self, sensor_device_obj: SensorDevice) -> SensorDevice:
+    def add_device(self, sensor_device_obj: SensorDevice) -> SensorDevice:
         """Service function for adding a sensor device entry to the
         database
 
@@ -36,3 +36,16 @@ class SensorDeviceService(BaseService):
 
         # Adding the sensor device to database
         return self.add(sensor_device_obj)
+    
+    def get_by_name(self, sensor_device_name:str) -> SensorDevice:
+        """Service function for retrieving a sensor device row by matching the name.
+
+        Args:
+            sensor_device_name (str): The name of the sensor device
+
+        Returns:
+            SensorDevice: The database model object for SensorDevice.
+        """
+
+        # Getting the SensorDevice object
+        return self.repo.get_first_by_args(name=sensor_device_name)

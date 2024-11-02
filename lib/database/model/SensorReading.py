@@ -33,29 +33,23 @@ class SensorReading(BaseModel):
 
     # Type Hinting all class attributes
     # for this database table
-    sensor_id: int
-    target_reading: float
     date : datetime
-    qcflag: int
-    network: str
     latitude: float
     longitude: float
+    target_reading: float
+    sensor_id: int
 
     # Initializing the attributes in
     # the pythonic class
     def __init__(self,
-                 sensor_id,
-                 target_reading,
                  date,
-                 qcflag,
-                 network,
                  latitude,
-                 longitude):
-        self.sensor_id = sensor_id
-        self.target_reading = target_reading
+                 longitude,
+                 target_reading,
+                 sensor_id):
         self.date = date
-        self.qcflag = qcflag
-        self.network = network
         self.latitude = latitude
         self.longitude = longitude
+        self.target_reading = target_reading
+        self.sensor_id = sensor_id
 

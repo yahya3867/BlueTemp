@@ -11,3 +11,4 @@ docker/data-retriever/log
 .flaskenv
 flask_session
 __pycache__
+waterTemp_sensorData

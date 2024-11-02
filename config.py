@@ -18,7 +18,8 @@ class Config:
 
     FLASK_ENV = environ.get('FLASK_ENV')
     SECRET_KEY = environ.get('SECRET_KEY')
-    WEBSITE_NAME = environ.get("WEBSITE_NAME")
+    WEBSITE_NAME = "BlueTemp"
+    print(WEBSITE_NAME)
     WEBSITE_EMAIL = environ.get("WEBSITE_EMAIL")
     WEBSITE_LOGO = environ.get("WEBSITE_LOGO")
     HOMEPAGE_ABOUT = environ.get("HOMEPAGE_ABOUT")

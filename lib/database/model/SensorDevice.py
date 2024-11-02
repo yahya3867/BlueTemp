@@ -31,10 +31,8 @@ class SensorDevice(BaseModel):
     # Initializing the attributes in
     # the pythonic class
     def __init__(self,
-                 id,
                  name,
                  target_reading_type):
-        self.id = id
         self.name = name
         self.target_reading_type = target_reading_type
 

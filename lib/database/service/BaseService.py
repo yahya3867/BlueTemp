@@ -16,9 +16,9 @@ class BaseService:
     the repository classes.
     """
 
-    def __init__(self, session: Session, repo: BaseRepository):
+    def __init__(self, session: Session, repo: BaseRepository, engine):
         self.session: Session = session
-        self.repo: BaseRepository = repo(self.session)
+        self.repo: BaseRepository = repo(self.session, engine)
 
     def add(self, database_obj: BaseModel):
         return self.repo.add_row(database_obj=database_obj)
