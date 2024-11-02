@@ -12,7 +12,6 @@ services:
     restart: on-failure
     
     volumes:
-      - ./templates:/bluetemp/templates
       - ./flaskr:/bluetemp/flaskr
       - ./dist:/bluetemp/dist
       - ./lib:/bluetemp/lib
