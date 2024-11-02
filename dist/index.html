@@ -1,39 +1,133 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlueTemp</title>
-    <link rel="stylesheet" href="master.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-</head>
-<body>
-    <div class="main_container">
-        <div class="map_container">
-            <div id="map"></div>
+{% extends 'homepage/base.html' %}
+{% block content %}
+<div class="homepage_home">
+    <!-- headerHomeContent-->
+    <div class="header">
+        <div class="header-content">
+            <h2 style="color:white">{{ WEBSITE_NAME }}</h2>
+            <button>Go to Dashboard</button>
         </div>
-        <div class="controls_container">
-            <div class="controls_box">
-                <select name="sensor_select" id="">
-                    <option value="1">Sensor 1</option>
-                    <option value="2">Sensor 2</option>
-                    <option value="3">Sensor 3</option>
-                    <option value="4">Sensor 4</option>
-                </select>
-                <input type="date" name="start-date" id="">
-                <input type="date" name="end-date" id="">
-                <button>Predict</button>
+        <div class="header-carousel">
+            <div class="header-carousel__items">
+                <div class="header-carousel__item active">
+                </div>
+                <div class="header-carousel__item"> 
+
+                </div>
+            </div>
+            <div class="header-carousel__btn header-carousel__btn-left"><</div>
+            <div class="header-carousel__btn header-carousel__btn-right">></div>
+            <div class="header-carousel__pages">
+                <div class="header-carousel__page active"></div>
+                <div class="header-carousel__page"></div>
             </div>
         </div>
-        <div class="chart_container">
-            <div class="chart_box">
-                <canvas id="chart" class="chart"></canvas>
-            <div id="resize_chart"></div>
+
+    </div> 
+
+    <!-- about us -->
+    <div class="main">
+        <div class="aboutHome">
+            <div class="aboutHomeContainer">
+                <div class="aboutColumn">
+                    <h2>About Us<h2>
+                </div>
+
+                <div class="aboutColumn">
+                    <p> {{HOMEPAGE_ABOUT}} 
+                    </p> 
+
+                    <div class="aboutHomeBtn">
+                        <button class="aboutBtn">Learn more</button>
+                    </div>
+                </div>      
+            </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="engine.js"></script>
-</body>
-</html>
+</div>
+
+<script>
+    let btn_left = document.querySelector(".header-carousel__btn-left");
+    let btn_right = document.querySelector(".header-carousel__btn-right");
+    let page_switch =document.querySelector(".header-carousel__pages");
+    let items = document.getElementsByClassName("header-carousel__item");
+    let pages = document.getElementsByClassName("header-carousel__page");
+    let goToDashboard = document.querySelector(".header-content button");
+    let aboutBtn = document.querySelector(".aboutBtn");
+    let index = 0;
+    let timer = null;
+
+    goToDashboard.addEventListener('click', function(){
+        window.location.href = "{{url_for('auth.login')}}";
+    })
+
+    aboutBtn.addEventListener('click', function(){
+        window.location.href = `/aboutus`;
+    })
+
+
+    function reset(){
+        for(let i = 0; i < items.length; i++){
+            if(items[i].classList.contains("active")){
+                items[i].classList.remove("active");
+            }
+        }
+        for(let i = 0; i < pages.length; i++){
+            if(pages[i].classList.contains("active")){
+                pages[i].classList.remove("active");
+            }
+        }
+    }
+    function move(){
+        reset();
+        items[index].classList.add("active");
+        pages[index].classList.add("active");
+    }
+
+    function move_right(){
+        console.log("right");
+        if(index < items.length-1){
+            index++;
+        }else{
+            index = 0;
+        }
+        move();
+    }
+    btn_right.addEventListener('click', move_right());
+
+
+    function move_left(){
+        console.log("left");
+        if(index > 0){
+            index--;
+        }else{
+            index = items.length-1;
+        }
+        move();
+    }
+
+    btn_left.addEventListener('click', move_left());
+
+    timer = setInterval(function(){
+        move_right();
+    },6000)
+
+    page_switch.addEventListener('click', e => {
+        if (e.target.classList.contains("header-carousel__page")) {
+            reset();
+            for (let i = 0; i < 2; i++) {
+                if (page_switch.children[i] == e.target) {
+                    items[i].classList.add("active");
+                    pages[i].classList.add("active");
+                    index = i;
+                }
+            }
+            clearInterval(timer);
+            timer=setInterval(function(){
+                move_right();
+            },6000)
+        }
+    })
+</script>
+
+{% endblock %}
